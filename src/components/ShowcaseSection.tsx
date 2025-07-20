@@ -10,27 +10,43 @@ export default function ShowcaseSection({ className = '' }: ShowcaseSectionProps
   const workTypes = [
     {
       id: 1,
-      title: 'E-commerce Landing Pages',
-      category: 'Online Sales',
+      title: 'Landing Pages',
+      category: 'High-Converting',
       image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=300&fit=crop',
-      description: 'High-converting landing pages for product launches, sales campaigns, and e-commerce stores. Optimized for maximum conversions and sales.',
-      features: ['Product showcases', 'Sales funnels', 'Checkout optimization']
+      description: 'Conversion-focused landing pages that turn visitors into customers. Perfect for product launches, campaigns, and lead generation.',
+      features: ['A/B testing ready', 'Mobile optimized', 'Fast loading']
     },
     {
       id: 2,
-      title: 'SaaS & Tech Platforms',
-      category: 'Technology',
+      title: 'Corporate Websites',
+      category: 'Professional',
       image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop',
-      description: 'Modern landing pages for SaaS products, mobile apps, and technology services. Focus on user acquisition and product demonstration.',
-      features: ['App demos', 'Feature highlights', 'User onboarding']
+      description: 'Modern corporate websites that build trust and credibility. Showcase your company professionally and generate qualified leads.',
+      features: ['Company branding', 'Service pages', 'Contact forms']
     },
     {
       id: 3,
-      title: 'Business & Consulting',
-      category: 'Professional Services',
+      title: 'E-commerce',
+      category: 'Online Sales',
       image: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=400&h=300&fit=crop',
-      description: 'Professional landing pages for consulting firms, agencies, and service-based businesses. Build trust and generate qualified leads.',
-      features: ['Service showcases', 'Client testimonials', 'Lead generation']
+      description: 'Complete e-commerce solutions from product pages to checkout. Optimized for maximum sales and user experience.',
+      features: ['Product catalogs', 'Shopping cart', 'Payment integration']
+    },
+    {
+      id: 4,
+      title: 'Performance Optimization',
+      category: 'Speed & SEO',
+      image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=300&fit=crop',
+      description: 'Optimize your website for speed, SEO, and user experience. Improve rankings and conversion rates.',
+      features: ['Speed optimization', 'SEO improvements', 'Core Web Vitals']
+    },
+    {
+      id: 5,
+      title: 'UX/UI Design',
+      category: 'User Experience',
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop',
+      description: 'User-centered design that creates intuitive and engaging experiences. From wireframes to final designs.',
+      features: ['User research', 'Wireframing', 'Prototyping']
     }
   ];
 
@@ -52,14 +68,14 @@ export default function ShowcaseSection({ className = '' }: ShowcaseSectionProps
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {workTypes.map((workType, index) => (
             <motion.div
               key={workType.id}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
               className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 h-full flex flex-col"
             >
               <div className="relative overflow-hidden flex-shrink-0">
