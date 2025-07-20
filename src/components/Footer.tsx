@@ -64,8 +64,8 @@ export default function Footer({ className = '' }: FooterProps) {
                 'Landing Pages',
                 'Corporate Websites',
                 'E-commerce',
-                'SEO Optimization',
-                'Digital Consulting'
+                'Performance Optimization',
+                'UX/UI Design'
               ].map((service, index) => (
                 <li key={index} className="hover:text-white transition-colors duration-300 cursor-pointer">
                   {service}

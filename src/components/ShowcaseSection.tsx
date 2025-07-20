@@ -32,22 +32,7 @@ export default function ShowcaseSection({ className = '' }: ShowcaseSectionProps
       description: 'Complete e-commerce solutions from product pages to checkout. Optimized for maximum sales and user experience.',
       features: ['Product catalogs', 'Shopping cart', 'Payment integration']
     },
-    {
-      id: 4,
-      title: 'Performance Optimization',
-      category: 'Speed & SEO',
-      image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=300&fit=crop',
-      description: 'Optimize your website for speed, SEO, and user experience. Improve rankings and conversion rates.',
-      features: ['Speed optimization', 'SEO improvements', 'Core Web Vitals']
-    },
-    {
-      id: 5,
-      title: 'UX/UI Design',
-      category: 'User Experience',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop',
-      description: 'User-centered design that creates intuitive and engaging experiences. From wireframes to final designs.',
-      features: ['User research', 'Wireframing', 'Prototyping']
-    }
+    
   ];
 
   return (
