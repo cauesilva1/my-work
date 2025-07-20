@@ -25,7 +25,7 @@ export const promotions: Promotion[] = [
     description: 'First 5 clients get a complete landing page absolutely FREE! Perfect opportunity to boost your business.',
     offer: 'FREE',
     maxClients: 5,
-    currentClients: 0, // Update this number as clients sign up
+    currentClients: 1, // Update this number as clients sign up
     buttonText: 'Claim My Free Landing Page',
     buttonLink: 'https://api.whatsapp.com/send?phone=5199186506&text=Hi! I want to claim my FREE landing page! 🎉',
     backgroundColor: 'bg-gradient-to-br from-purple-600 to-pink-600',

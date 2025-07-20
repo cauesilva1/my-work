@@ -1,10 +1,14 @@
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
 import './globals.css'
-import { ReactNode } from 'react'
+import Script from 'next/script'
 
-export const metadata = {
-  title: 'Caue C Silva — Landing Page Specialist | Canada',
-  description: 'Professional landing page development that converts. Get a free audit and boost your online presence. Specialized in e-commerce, SaaS, and business landing pages.',
-  keywords: 'landing page, web design, conversion optimization, e-commerce, SaaS, Canada, freelance developer',
+const inter = Inter({ subsets: ['latin'] })
+
+export const metadata: Metadata = {
+  title: 'Caue C Silva - Landing Pages that Convert',
+  description: 'Professional landing pages and websites that drive conversions. Specializing in high-converting designs for businesses and entrepreneurs.',
+  keywords: 'landing pages, website design, conversion optimization, web development, digital marketing',
   authors: [{ name: 'Caue C Silva' }],
   creator: 'Caue C Silva',
   publisher: 'Caue C Silva',
@@ -18,8 +22,8 @@ export const metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'Caue C Silva — Landing Page Specialist',
-    description: 'Professional landing page development that converts. Get a free audit and boost your online presence.',
+    title: 'Caue C Silva - Landing Pages that Convert',
+    description: 'Professional landing pages and websites that drive conversions. Specializing in high-converting designs for businesses and entrepreneurs.',
     url: 'https://my-work-fawn.vercel.app',
     siteName: 'Caue C Silva',
     images: [
@@ -27,7 +31,7 @@ export const metadata = {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Caue C Silva - Landing Page Specialist',
+        alt: 'Caue C Silva - Landing Pages that Convert',
       },
     ],
     locale: 'en_US',
@@ -35,9 +39,10 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Caue C Silva — Landing Page Specialist',
-    description: 'Professional landing page development that converts. Get a free audit and boost your online presence.',
+    title: 'Caue C Silva - Landing Pages that Convert',
+    description: 'Professional landing pages and websites that drive conversions.',
     images: ['/og-image.jpg'],
+    creator: '@cauesilva',
   },
   robots: {
     index: true,
@@ -51,34 +56,97 @@ export const metadata = {
     },
   },
   verification: {
-    google: 'your-google-verification-code',
+    google: 'your-google-verification-code', // Replace with your actual verification code
   },
 }
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en">
       <head>
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="manifest" href="/site.webmanifest" />
-        <meta name="theme-color" content="#3b82f6" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-        
-        {/* Preconnect to external domains for performance */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://images.unsplash.com" />
-        
-        {/* Font optimization */}
-        <link 
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" 
-          rel="stylesheet" 
+        {/* Google Analytics 4 */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
+          strategy="afterInteractive"
         />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-XXXXXXXXXX', {
+              page_title: document.title,
+              page_location: window.location.href,
+            });
+          `}
+        </Script>
+
+        {/* Google Tag Manager */}
+        <Script id="google-tag-manager" strategy="afterInteractive">
+          {`
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-XXXXXXX');
+          `}
+        </Script>
+
+        {/* Facebook Pixel */}
+        <Script id="facebook-pixel" strategy="afterInteractive">
+          {`
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', 'XXXXXXXXXX'); // Replace with your Pixel ID
+            fbq('track', 'PageView');
+          `}
+        </Script>
+
+        {/* Hotjar */}
+        <Script id="hotjar" strategy="afterInteractive">
+          {`
+            (function(h,o,t,j,a,r){
+                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                h._hjSettings={hjid:XXXXXXX,hjsv:6}; // Replace with your Hotjar ID
+                a=o.getElementsByTagName('head')[0];
+                r=o.createElement('script');r.async=1;
+                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                a.appendChild(r);
+            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+          `}
+        </Script>
       </head>
-      <body className="font-sans bg-white text-gray-900 antialiased">
+      <body className={inter.className}>
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe 
+            src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+            height="0" 
+            width="0" 
+            style={{display:'none',visibility:'hidden'}}
+          />
+        </noscript>
+
+        {/* Facebook Pixel (noscript) */}
+        <noscript>
+          <img 
+            height="1" 
+            width="1" 
+            style={{display:'none'}}
+            src="https://www.facebook.com/tr?id=XXXXXXXXXX&ev=PageView&noscript=1"
+          />
+        </noscript>
+
         {children}
       </body>
     </html>
