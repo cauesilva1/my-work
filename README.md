@@ -1,145 +1,153 @@
-# Landing Page Developer - Portfolio
+# Caue C Silva - Landing Page Specialist
 
-Uma landing page moderna e profissional para desenvolvedores de landing pages, construída com Next.js 15, TypeScript, Tailwind CSS e Framer Motion.
+A professional landing page portfolio for a Canadian-based landing page specialist, built with Next.js 15, TypeScript, Tailwind CSS and Framer Motion.
 
-## ✨ Características
+## ✨ Features
 
-### 🎨 Design Moderno
-- **Gradientes e Efeitos Visuais**: Design com gradientes modernos e efeitos de glass morphism
-- **Animações Suaves**: Animações fluidas com Framer Motion
-- **Responsivo**: Totalmente adaptável para todos os dispositivos
-- **Tipografia Profissional**: Hierarquia visual bem definida
+### 🎨 Modern Design
+- **Clean Gradients**: Modern blue-purple gradient design
+- **Smooth Animations**: Fluid animations with Framer Motion
+- **Responsive Design**: Fully adaptable for all devices
+- **Professional Typography**: Inter font with optimized hierarchy
 
 ### 🚀 Performance
-- **Next.js 15**: Framework mais recente com App Router
-- **TypeScript**: Tipagem estática para melhor desenvolvimento
-- **Tailwind CSS 4**: CSS utility-first com configuração otimizada
-- **Lazy Loading**: Carregamento otimizado de imagens
-- **SEO Otimizado**: Meta tags e estrutura semântica
+- **Next.js 15**: Latest framework with App Router
+- **TypeScript**: Static typing for better development
+- **Tailwind CSS 4**: Utility-first CSS with optimized configuration
+- **Lazy Loading**: Optimized image loading
+- **SEO Optimized**: Meta tags and semantic structure
 
-### 🛠️ Funcionalidades
-- **Navegação Fixa**: Menu de navegação com scroll transparente
-- **Seções Modulares**: Componentes reutilizáveis e organizados
-- **FAQ Interativo**: Accordion com animações
-- **Formulário de Contato**: Integração com WhatsApp
-- **Portfólio Dinâmico**: Showcase de projetos com hover effects
+### 🛠️ Functionality
+- **Fixed Navigation**: Transparent scroll navigation
+- **Modular Sections**: Reusable and organized components
+- **Interactive FAQ**: Animated accordion
+- **WhatsApp Integration**: Direct contact links
+- **Portfolio Showcase**: Types of work with detailed descriptions
 
-## 📁 Estrutura do Projeto
+## 📁 Project Structure
 
 ```
 src/
 ├── app/
-│   ├── globals.css          # Estilos globais e animações
-│   ├── layout.tsx           # Layout principal
-│   └── page.tsx             # Página inicial
+│   ├── globals.css          # Global styles and animations
+│   ├── layout.tsx           # Main layout with SEO
+│   └── page.tsx             # Home page
 ├── components/
-│   ├── Navigation.tsx       # Navegação fixa
-│   ├── HeroSection.tsx      # Seção hero
-│   ├── ShowcaseSection.tsx  # Portfólio
-│   ├── BenefitsSection.tsx  # Benefícios
-│   ├── FAQSection.tsx       # FAQ interativo
-│   ├── Footer.tsx           # Rodapé
-│   └── LoadingSpinner.tsx   # Componente de loading
+│   ├── Navigation.tsx       # Fixed navigation
+│   ├── HeroSection.tsx      # Hero section
+│   ├── ShowcaseSection.tsx  # Work types showcase
+│   ├── BenefitsSection.tsx  # Benefits
+│   ├── FAQSection.tsx       # Interactive FAQ
+│   ├── Footer.tsx           # Footer
+│   └── LoadingSpinner.tsx   # Loading component
 ├── data/
-│   └── content.ts           # Dados centralizados
+│   └── content.ts           # Centralized content
 ├── hooks/
-│   └── useScrollAnimation.ts # Hooks personalizados
+│   └── useScrollAnimation.ts # Custom hooks
 ├── types/
-│   └── index.ts             # Tipos TypeScript
+│   └── index.ts             # TypeScript types
 └── utils/
-    └── constants.ts         # Constantes da aplicação
+    └── constants.ts         # App constants
 ```
 
-## 🚀 Como Usar
+## 🚀 Getting Started
 
-### Instalação
+### Installation
 
 ```bash
-# Clone o repositório
+# Clone the repository
 git clone https://github.com/seuusuario/my-landing.git
 
-# Entre no diretório
+# Navigate to directory
 cd my-landing
 
-# Instale as dependências
+# Install dependencies
 npm install
 
-# Execute em modo de desenvolvimento
+# Run in development mode
 npm run dev
 ```
 
-### Configuração
+### Configuration
 
-1. **Edite os dados pessoais** em `src/data/content.ts`:
+1. **Update personal information** in `src/data/content.ts`:
    ```typescript
    export const contactInfo: ContactInfo = {
-     whatsapp: '5511999999999', // Seu WhatsApp
-     email: 'seu@email.com',    // Seu email
-     name: 'Seu Nome'           // Seu nome
+     whatsapp: '5199186506',        // Your WhatsApp
+     email: 'cauecatonesilva@gmail.com', // Your email
+     name: 'Caue c silva'           // Your name
    };
    ```
 
-2. **Personalize as cores** em `src/app/globals.css`:
+2. **Customize colors** in `src/app/globals.css`:
    ```css
    :root {
-     --primary-color: #3b82f6;
-     --secondary-color: #8b5cf6;
+     --primary: #3b82f6;
+     --secondary: #8b5cf6;
    }
    ```
 
-3. **Adicione suas imagens** na pasta `public/`
+3. **Add your images** to the `public/` folder
 
-## 🎯 Melhorias Implementadas
+## 🎯 Recent Improvements
 
-### Código
-- ✅ **Componentização**: Separação em componentes reutilizáveis
-- ✅ **TypeScript**: Tipagem completa e interfaces
-- ✅ **Hooks Personalizados**: Reutilização de lógica
-- ✅ **Constantes Centralizadas**: Configurações organizadas
-- ✅ **Acessibilidade**: ARIA labels e navegação por teclado
+### Code Quality
+- ✅ **Modular Components**: Separated into reusable components
+- ✅ **TypeScript**: Complete typing and interfaces
+- ✅ **Custom Hooks**: Logic reusability
+- ✅ **Centralized Constants**: Organized configurations
+- ✅ **Accessibility**: ARIA labels and keyboard navigation
 
 ### Design
-- ✅ **Gradientes Modernos**: Paleta de cores profissional
-- ✅ **Animações Avançadas**: Efeitos de entrada e hover
-- ✅ **Responsividade Aprimorada**: Mobile-first design
-- ✅ **Micro-interações**: Feedback visual em interações
-- ✅ **Loading States**: Estados de carregamento elegantes
+- ✅ **Modern Gradients**: Professional color palette
+- ✅ **Advanced Animations**: Entry and hover effects
+- ✅ **Enhanced Responsiveness**: Mobile-first design
+- ✅ **Micro-interactions**: Visual feedback on interactions
+- ✅ **Loading States**: Elegant loading states
 
 ### Performance
-- ✅ **Lazy Loading**: Carregamento otimizado
-- ✅ **CSS Otimizado**: Classes utilitárias eficientes
-- ✅ **Bundle Size**: Código modular e leve
-- ✅ **SEO**: Meta tags e estrutura semântica
+- ✅ **Lazy Loading**: Optimized loading
+- ✅ **Optimized CSS**: Efficient utility classes
+- ✅ **Bundle Size**: Modular and lightweight code
+- ✅ **SEO**: Meta tags and semantic structure
+- ✅ **PWA Ready**: Web app manifest and icons
 
-## 🛠️ Tecnologias
+### SEO & Meta
+- ✅ **Complete Meta Tags**: Open Graph, Twitter Cards
+- ✅ **Robots.txt**: Search engine optimization
+- ✅ **Sitemap Ready**: XML sitemap structure
+- ✅ **Performance Headers**: Security and caching
+- ✅ **Font Optimization**: Inter font with preloading
 
-- **Next.js 15** - Framework React
-- **TypeScript** - Tipagem estática
-- **Tailwind CSS 4** - Framework CSS
-- **Framer Motion** - Animações
-- **React 19** - Biblioteca UI
+## 🛠️ Technologies
 
-## 📱 Responsividade
+- **Next.js 15** - React framework
+- **TypeScript** - Static typing
+- **Tailwind CSS 4** - CSS framework
+- **Framer Motion** - Animations
+- **React 19** - UI library
+
+## 📱 Responsiveness
 
 - 📱 Mobile: 320px - 768px
 - 💻 Tablet: 768px - 1024px
 - 🖥️ Desktop: 1024px+
 
-## 🎨 Paleta de Cores
+## 🎨 Color Palette
 
-- **Primária**: Azul (#3b82f6)
-- **Secundária**: Roxo (#8b5cf6)
-- **Neutra**: Cinza (#6b7280)
-- **Background**: Branco (#ffffff)
+- **Primary**: Blue (#3b82f6)
+- **Secondary**: Purple (#8b5cf6)
+- **Neutral**: Gray (#6b7280)
+- **Background**: White (#ffffff)
 
-## 📄 Licença
+## 📄 License
 
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+This project is under MIT license. See the [LICENSE](LICENSE) file for more details.
 
-## 🤝 Contribuição
+## 🤝 Contribution
 
-Contribuições são bem-vindas! Por favor, leia as [diretrizes de contribuição](CONTRIBUTING.md) antes de submeter um pull request.
+Contributions are welcome! Please read the [contribution guidelines](CONTRIBUTING.md) before submitting a pull request.
 
 ---
 
-**Desenvolvido com ❤️ usando Next.js e Tailwind CSS**
+**Built with ❤️ using Next.js and Tailwind CSS**

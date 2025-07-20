@@ -52,7 +52,7 @@ export default function ShowcaseSection({ className = '' }: ShowcaseSectionProps
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {workTypes.map((workType, index) => (
             <motion.div
               key={workType.id}
@@ -60,13 +60,13 @@ export default function ShowcaseSection({ className = '' }: ShowcaseSectionProps
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+              className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 h-full flex flex-col"
             >
-              <div className="relative overflow-hidden">
+              <div className="relative overflow-hidden flex-shrink-0">
                 <motion.img
                   src={workType.image}
                   alt={workType.title}
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-48 md:h-56 object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -79,21 +79,21 @@ export default function ShowcaseSection({ className = '' }: ShowcaseSectionProps
                 </div>
               </div>
 
-              <div className="p-6">
+              <div className="p-6 flex-grow flex flex-col">
                 <h3 className="text-xl font-bold mb-3 text-gray-900 group-hover:text-blue-600 transition-colors">
                   {workType.title}
                 </h3>
                 
-                <p className="text-gray-600 mb-4 leading-relaxed">
+                <p className="text-gray-600 mb-6 leading-relaxed flex-grow">
                   {workType.description}
                 </p>
 
                 {/* Features list */}
-                <div className="space-y-2">
+                <div className="space-y-2 mt-auto">
                   {workType.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center gap-2 text-sm text-gray-500">
-                      <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
-                      {feature}
+                      <div className="w-1.5 h-1.5 bg-blue-500 rounded-full flex-shrink-0"></div>
+                      <span>{feature}</span>
                     </div>
                   ))}
                 </div>
