@@ -33,11 +33,7 @@ export default function Navigation({ className = '' }: NavigationProps) {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-white/90 backdrop-blur-md shadow-lg border-b border-gray-200' 
-          : 'bg-transparent'
-      } ${className}`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100 ${className}`}
     >
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
@@ -49,7 +45,7 @@ export default function Navigation({ className = '' }: NavigationProps) {
             <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-sm">LP</span>
             </div>
-            <span className={`font-bold text-lg ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
+            <span className="font-bold text-lg text-gray-900">
               {contactInfo.name}
             </span>
           </motion.div>
@@ -63,9 +59,7 @@ export default function Navigation({ className = '' }: NavigationProps) {
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`font-medium transition-colors duration-300 hover:text-blue-600 ${
-                  isScrolled ? 'text-gray-700' : 'text-white'
-                }`}
+                className="font-medium text-gray-700 transition-colors duration-300 hover:text-blue-600"
               >
                 {item.label}
               </motion.a>
@@ -99,15 +93,15 @@ export default function Navigation({ className = '' }: NavigationProps) {
             aria-label="Toggle mobile menu"
           >
             <div className="w-6 h-6 flex flex-col justify-center items-center">
-              <span className={`block w-5 h-0.5 bg-current transition-all duration-300 ${
-                isScrolled ? 'text-gray-900' : 'text-white'
-              } ${isMobileMenuOpen ? 'rotate-45 translate-y-1' : ''}`}></span>
-              <span className={`block w-5 h-0.5 bg-current transition-all duration-300 mt-1 ${
-                isScrolled ? 'text-gray-900' : 'text-white'
-              } ${isMobileMenuOpen ? 'opacity-0' : ''}`}></span>
-              <span className={`block w-5 h-0.5 bg-current transition-all duration-300 mt-1 ${
-                isScrolled ? 'text-gray-900' : 'text-white'
-              } ${isMobileMenuOpen ? '-rotate-45 -translate-y-1' : ''}`}></span>
+              <span className={`block w-5 h-0.5 bg-gray-900 transition-all duration-300 ${
+                isMobileMenuOpen ? 'rotate-45 translate-y-1' : ''
+              }`}></span>
+              <span className={`block w-5 h-0.5 bg-gray-900 transition-all duration-300 mt-1 ${
+                isMobileMenuOpen ? 'opacity-0' : ''
+              }`}></span>
+              <span className={`block w-5 h-0.5 bg-gray-900 transition-all duration-300 mt-1 ${
+                isMobileMenuOpen ? '-rotate-45 -translate-y-1' : ''
+              }`}></span>
             </div>
           </motion.button>
         </div>
