@@ -38,7 +38,7 @@ export default function PromotionPopup({ promotion, onClose, isVisible }: Promot
     if (!promotion.endDate) return;
 
     const calculateTimeLeft = () => {
-      const difference = new Date(promotion.endDate).getTime() - new Date().getTime();
+      const difference = new Date(promotion.endDate!).getTime() - new Date().getTime();
       
       if (difference > 0) {
         setTimeLeft({

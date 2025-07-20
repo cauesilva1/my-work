@@ -1,5 +1,4 @@
 'use client'
-import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
 import Navigation from '../components/Navigation'
 import HeroSection from '../components/HeroSection'
@@ -9,12 +8,12 @@ import FAQSection from '../components/FAQSection'
 import Footer from '../components/Footer'
 import PromotionPopup from '../components/PromotionPopup'
 import FloatingPromotionButton from '../components/FloatingPromotionButton'
-import { getActivePromotion, shouldShowPromotion, markPromotionAsSeen, getAllActivePromotions } from '../data/promotions'
+import { getActivePromotion, shouldShowPromotion, markPromotionAsSeen, Promotion } from '../data/promotions'
 
 export default function Home() {
   const [showPopup, setShowPopup] = useState(false);
   const [showFloatingButton, setShowFloatingButton] = useState(false);
-  const [currentPromotion, setCurrentPromotion] = useState<any>(null);
+  const [currentPromotion, setCurrentPromotion] = useState<Promotion | null>(null);
 
   useEffect(() => {
     console.log('🚀 Page loaded, checking for promotions...'); // Debug log

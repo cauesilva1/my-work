@@ -1,6 +1,6 @@
 'use client'
 import { motion } from 'framer-motion';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { contactInfo } from '../data/content';
 
 interface NavigationProps {
@@ -8,17 +8,7 @@ interface NavigationProps {
 }
 
 export default function Navigation({ className = '' }: NavigationProps) {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const navItems = [
     { label: 'Home', href: '#home' },
